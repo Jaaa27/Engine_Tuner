@@ -1,0 +1,5 @@
+{
+  "name": "Ford Coyote 5.0L V8 (Gen3)",
+  "redline": 7500,
+  "curve": "torque_curve.csv"
+}

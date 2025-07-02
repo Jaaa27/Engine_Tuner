@@ -1,0 +1,5 @@
+{
+  "name": "Honda K20A2 2.0L (i-VTEC)",
+  "redline": 8300,
+  "curve": "torque_curve.csv"
+}

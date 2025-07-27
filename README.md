@@ -20,12 +20,15 @@ A modern desktop GUI app that simulates engine behavior for tuning scenarios. Bu
 ```
 engine_tuner/
 ├── assets/
-│ └── profiles/
+│ └── engines/
 ├── ui/
 │ ├── tuner_window.py
 │ └── rpm_gauge.py
 ├── main.py
-├── requirements.txt
+├── engine
+│ └── config_loader.py
+│ └── engine_registry.py
+│ └── simulator.py
 └── README.md
 ```
 

@@ -1,9 +1,9 @@
-import tkinter as tk
+import customtkinter as ctk
 from ui.tuner_window import TunerWindow
 
 def main():
-    root = tk.Tk()
-    TunerWindow(root)
+    root = ctk.CTk()
+    app = TunerWindow(root)
     root.mainloop()
 
 if __name__ == "__main__":

@@ -12,6 +12,10 @@ ENGINE_ROOT = Path(__file__).resolve().parent.parent / "assets" / "engines"
 
 
 def scan_engines() -> Dict[str, Dict[str, Any]]:
+    """
+    Return {key : meta_dict} and guarantee each meta dict has:
+        folder, curve, name, display, idle, redline
+    """
     engines: Dict[str, Dict[str, Any]] = {}
     if not ENGINE_ROOT.exists():
         return engines
@@ -20,11 +24,17 @@ def scan_engines() -> Dict[str, Dict[str, Any]]:
         meta_file = folder / "meta.json"
         curve_csv = folder / "torque_curve.csv"
         if folder.is_dir() and meta_file.exists() and curve_csv.exists():
-            meta = json.loads(meta_file.read_text())
-            meta["folder"] = folder
-            meta["curve"]  = curve_csv
+            try:
+                meta = json.loads(meta_file.read_text())
+            except json.JSONDecodeError:
+                continue
+            meta["folder"]  = folder
+            meta["curve"]   = curve_csv
+            # guarantee display key
+            meta["display"] = meta.get("name", folder.name)
             engines[folder.name] = meta
     return engines
+
 
 
 def _slugify(text: str) -> str:

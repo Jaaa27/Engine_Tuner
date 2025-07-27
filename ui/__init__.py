@@ -1,3 +1,2 @@
-"""
-Graphical front-end for Engine Tuner.
-"""
+from .tuner_window import TunerWindow
+

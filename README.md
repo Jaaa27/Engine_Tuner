@@ -12,11 +12,12 @@ A modern desktop GUI app that simulates engine behavior for tuning scenarios. Bu
 - 🏁 Driving simulation mode (auto-throttle, auto-gear)
 - 🎨 Polished UI with dark mode and tabbed navigation
 
-## 🖥 Preview
+## 🖥 Demo
 
-![Screenshot](assets/screenshots/dashboard.png) <!-- add a real screenshot or GIF here -->
+![Engine Tuner Demo](assets/demo.gif)
 
 ## 📂 Project Structure
+```
 engine_tuner/
 ├── assets/
 │ └── profiles/
@@ -26,6 +27,7 @@ engine_tuner/
 ├── main.py
 ├── requirements.txt
 └── README.md
+```
 
 ## 📦 Requirements
 
@@ -37,11 +39,13 @@ Install dependencies:
 
 ```bash
 pip install -r requirements.txt
+```
 
-🚀 Run the App
+## 🚀 Run the App
 
 python main.py
-💾 Save & Load Profiles
+
+## 💾 Save & Load Profiles
 
 Profiles are stored in assets/profiles/custom_profile.json. They contain:
 
